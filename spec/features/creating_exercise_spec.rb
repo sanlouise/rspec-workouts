@@ -14,6 +14,16 @@ RSpec.feature "Creating Exercise" do
     click_link "New Workout"
     expect(page).to have_link("Back")
     
+    fill_in "Duration", with: 30
+    fill_in "Workout Details", with: "Running"
+    fill_in "Date", with: "2016-04-30"
+    click_button "Add Workout"
+    
+    expect(page).to have_content("Your workout was added!")
+    
+    # The user should be redirected to the show page of the workout that was added last.
+    exercise = Exercise.last 
+    expect(page.current_path).to eq(user_exercise_path(@john, exercise))
     
   end
 end
