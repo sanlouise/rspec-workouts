@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use pg for Heroku
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Devise for user authentication
@@ -53,4 +52,8 @@ end
 
 group :test do
   gem 'capybara', '~> 2.4.4'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
