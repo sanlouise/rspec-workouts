@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Workout App</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <%= csrf_meta_tags %>
-  </head>
-  <header></header>
-  <main>
-    <body>
-      <header role="banner">
-  
-  <%= render 'layouts/navigation' %>
-  
-      </header>
+<head>
+  <title>Workout App</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<header></header>
+
+<main>
+  <body>
+    <header role="banner">
+      <%= render 'layouts/navigation' %>
+    </header>
+    <div class="container">
       <%= yield %>
-    </body>
-  </main>
-  
-  <%= render 'layouts/footer' %>
+  </body>
+</main>
+
+<%= render 'layouts/footer' %>
+</div>
 </html>
