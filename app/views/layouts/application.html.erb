@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>WorkoutApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Workout App</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
-
-</body>
+  <body>
+    <header role="banner">
+      <div class="nav-wrapper">
+  
+      <div class="container-fluid">
+        <div class="navbar-header">
+  
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+  
+          <%= link_to "The Athletes Crib", root_path, class: "navbar-brand" %>
+  
+        </div>
+      </div>
+      </nav>
+    </header>
+    <%= yield %>
+  </body>
 </html>
