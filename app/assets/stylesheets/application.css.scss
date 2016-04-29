@@ -22,7 +22,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    font-family: 'Catamaran' !important, sans-serif;
+    font-family: 'Catamaran', sans-serif;
 }
 
 main {
@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-    color: white !important;
+    color: #D1D0CE !important;
 }
 
 .actions.col.s12.m8.offset-m2 {
