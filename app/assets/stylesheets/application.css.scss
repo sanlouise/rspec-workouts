@@ -13,15 +13,26 @@
  *= require_tree .
  *= require_self
  */
- 
+
+@import url(https://fonts.googleapis.com/css?family=Catamaran);
 @import "materialize";
+
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Catamaran' !important, sans-serif;
 }
 
 main {
     flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: white !important;
 }
