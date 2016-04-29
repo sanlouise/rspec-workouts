@@ -23,6 +23,7 @@ RSpec.feature "Creating Exercise" do
     
     # The user should be redirected to the show page of the workout that was added last.
     exercise = Exercise.last 
+    # Nested route, user and exercise are needed to get to the right route
     expect(page.current_path).to eq(user_exercise_path(@john, exercise))
     
   end
