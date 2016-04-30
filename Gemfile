@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+
 # Use pg for Heroku
 gem 'pg'
 # Use SCSS for stylesheets
@@ -37,6 +38,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.2.3'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'
+  
+  # To run Guard 
+  gem 'sqlite3'
   
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
