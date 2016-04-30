@@ -1,7 +1,7 @@
 <div class='row'>
   <div class='col-md-12'>
+    <!--Creating nested route-->
     <%= form_for([current_user, @exercise], :html => {class: "form-horizontal", role: "form"}) do |f| %>
-      
       <% if @exercise.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@exercise.errors.count, "error") %> prohibited this exercise from being saved: </h2>
@@ -13,31 +13,31 @@
         </div>
       <% end %>
       
+    <!--Duration-->
     <div class="form-group">
       <div class="control-label col-md-2">
         <%= f.label :duration_in_min, "Duration (min)" %>
       </div>
-  
       <div class="col-md-10">
         <%= f.number_field :duration_in_min, class: "form-control" %>
       </div>
     </div>
-  
+    
+    <!--Workout Details-->
     <div class="form-group">
       <div class="control-label col-md-2">
         <%= f.label :workout, "Workout Details" %><br>
       </div>
-  
       <div class="col-md-10">
         <%= f.text_area :workout, class: "form-control", rows: "10" %>
       </div>
     </div>
-  
+    
+    <!--Date-->
     <div class="form-group">
       <div class="control-label col-md-2">
-        <%= f.label :workout_date, "Activity date" %>
+        <%= f.label :workout_date, "Date" %>
       </div>
-  
       <div class="col-md-10">
         <%= f.text_field :workout_date, class: "form-control" %>
       </div>
