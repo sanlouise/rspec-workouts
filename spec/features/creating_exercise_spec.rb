@@ -40,10 +40,10 @@ RSpec.feature "Creating Exercise" do
     click_button "Create Exercise"
     
     expect(page).to have_content("Oops, your workout could not be added..")
-    expect_page.to have_content("Duration in min can't be blank")
-    expect_page.to have_content("Duration in min is not a number")
-    expect_page.to have_content("Workout can't be blank")
-    expect_page.to have_content("Workout date can't be blank")
+    expect(page).to have_content("Duration in min can't be blank")
+    expect(page).to have_content("Duration in min is not a number")
+    expect(page).to have_content("Workout can't be blank")
+    expect(page).to have_content("Workout date can't be blank")
     
   end
 end
