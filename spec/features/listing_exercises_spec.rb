@@ -9,7 +9,7 @@ RSpec.feature "Listing Exercises" do
     @e2 = @john.exercises.create(duration_in_min: 60, workout: "Cycling", workout_date: "2016-03-07")
   end
   
-  scenario "shows workouts of past 7 days" do
+  scenario "shows workouts of past 14 days" do
     visit "/"
     click_link "My Lounge"
     expect(page).to have_content(@e1.duration_in_min)

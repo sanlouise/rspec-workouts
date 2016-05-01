@@ -2,13 +2,13 @@
   <div class="col s12 m8 offset-m2">
     <!--If there are exercises, then run this code-->
     <% unless @exercises.empty? %>
-    <h1>Listing Exercises</h1>
+    <h1>Your Workouts</h1>
     <table class="highlight">
       <thead>
         <tr>
-            <th data-field="duration">Duration (mins)</th>
-            <th data-field="details">Workout Details</th>
-            <th data-field="date">Date</th>
+            <th data-field="duration">Date</th>
+            <th data-field="details">Activity</th>
+            <th data-field="date">Duration (mins)</th>
             <th colspan="3"></th>
         </tr>
       </thead>
@@ -16,13 +16,13 @@
       <tbody>
         <% @exercises.each do |exercise| %>
           <tr>
-  
-            <td><%= exercise.duration_in_min %></td>
-            <td><%= truncate(exercise.workout, length: 120) %></td>
+            
             <td><%= exercise.workout_date %></td>
+            <td><%= truncate(exercise.workout, length: 120) %></td>
+            <td><%= exercise.duration_in_min %></td>
             <td><%= link_to "Show", [current_user, exercise] %></td>
             <td><%= link_to "Edit", [:edit, current_user, exercise] %></td>
-            <td><%= link_to "Delete", [current_user, exercise, method: :delete, 
+            <td><%= link_to "Delete", [current_user, exercise], method: :delete, 
                                     data: {confirm: "Sure you want to delete this workout?"} %></td>
           </tr>
         <% end %>
