@@ -2,6 +2,8 @@ class ExercisesController < ApplicationController
   
   # Applied to the show action
   before_action :set_exercise, except: [:index, :new, :create]
+  # Only logged in users can view workouts
+  before_action :authenticate_user!
   
   def index
   end

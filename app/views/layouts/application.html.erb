@@ -10,12 +10,10 @@
 <header></header>
 
 <main>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container center">
-      <%= yield %>
+  <%= render 'layouts/header' %>
+  <div class="container center">
     <%= render 'layouts/notices' %>
-  </body>
+    <%= yield %>
 </main>
 <%= render 'layouts/footer' %>
     </div>
