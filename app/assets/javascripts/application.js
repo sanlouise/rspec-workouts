@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize-sprockets
+//= require raphael.min
+//= require morris.min
 //= require turbolinks
 //= require_tree .
