@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'dashboard/index'
-  
-  
+
   # Create nested route for exercises
   resources :users do
     resources :exercises
