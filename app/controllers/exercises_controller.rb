@@ -25,6 +25,19 @@ class ExercisesController < ApplicationController
     end
   end
   
+  def edit
+  end
+  
+  def update
+    if @exercise.update(exercise_params)
+      flash[:success] = "Your workout was updated!"
+      redirect_to [current_user, @exercise]
+    else
+      flash[:danger] = "Oops, your workout could not be updated.."
+      render :edit
+    end
+  end
+  
   def show
   end
   

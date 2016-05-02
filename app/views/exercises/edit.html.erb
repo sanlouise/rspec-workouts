@@ -1,0 +1,4 @@
+<h1 class="center">Updating Your Workout, <%= current_user.full_name %></h1>
+<%= render 'form' %>
+<%= link_to "Show", [current_user, @exercise] %>
+<%= link_to "Back", user_exercises_path(current_user) %>
