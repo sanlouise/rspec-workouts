@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "Deleting Exercises" do
   before do
-    @owner = User.create(email: "owner@example.com", password: "password")
+    @owner = User.create(first_name: "John", last_name: "Doe", email: "john@example.com", password: "password")
     # Set a date here that is within the last 14 days
     @owner_ex = @owner.exercises.create!(duration_in_min: 45, workout: "Running", 
                                         workout_date: Date.today)
