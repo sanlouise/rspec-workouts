@@ -1,0 +1,9 @@
+<div class="row">
+  <% @athletes.each do |athlete| %>
+  <div>
+    <%= athlete.full_name %>
+  </div>
+  <% end %>
+</div>
+<ul class="pagination"><li class="waves-effect">
+<%= will_paginate @athletes %></li></ul>

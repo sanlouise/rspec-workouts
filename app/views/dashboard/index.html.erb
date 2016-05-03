@@ -6,6 +6,14 @@
   <div class="row">
     <div class="center home">
       <p class="homepage-p">Join Our Other Members<p>
+      <div class="center">
+        <%= form_tag(search_dashboard_path, role: "search") do %>
+          <div class="input-field">
+            <%= text_field_tag :search_name, nil, placeholder: "Search for friends" %>
+          </div>
+            <%= submit_tag "Search", class: "material-icons" %>
+        <% end %>
+      </div> 
         
       <ul class="pagination"><li class="waves-effect">
       <%= will_paginate @athletes %></li></ul>
