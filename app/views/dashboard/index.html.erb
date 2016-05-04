@@ -4,26 +4,31 @@
   <p class="homepage-p">Show them what you've got.</p>
   
   <div class="row">
-    <div class="center home">
-      <p class="homepage-p">Join Our Other Members<p>
-      <div class="center">
-        <%= form_tag(search_dashboard_path, role: "search") do %>
-          <div class="input-field">
-            <%= text_field_tag :search_name, nil, placeholder: "Search for friends" %>
-          </div>
-            <%= submit_tag "Search", class: "material-icons" %>
-        <% end %>
-      </div> 
-        
-      <ul class="pagination"><li class="waves-effect">
-      <%= will_paginate @athletes %></li></ul>
-        
-      <% @athletes.each do |athlete| %>
-      <div>
-        <%= athlete.full_name %>
-      </div>
-      <% end %>
-      
+    <div class="col s6 offset-s3 center">
+      <div class="center home">
+        <p class="homepage-p">Join Our Other Members<p>
+          <div class="row">
+            <div class="col s8 offset-s2 center">
+              <div class="center">
+                <%= form_tag(search_dashboard_path, role: "search") do %>
+                  <div class="input-field">
+                    <%= text_field_tag :search_name, nil, placeholder: "Search members" %>
+                  </div>
+                    <i class="small material-icons"><%= submit_tag "search"%></i>
+                <% end %>
+              </div> 
+            </div>
+     <!--<div class="col s6 offset-s3 center">   -->
+     <!--   <ul class="pagination"><li class="waves-effect">-->
+     <!--   < will_paginate @athletes %></li></ul>-->
+          
+     <!--   < athletes.each do |athlete| %>-->
+     <!--   <div>-->
+     <!--     <= athlete.full_name %>-->
+     <!--   </div>-->
+     <!--   < end %>-->
+     <!-- </div>-->
+     </div>
     </div>
   </div>
 </body>

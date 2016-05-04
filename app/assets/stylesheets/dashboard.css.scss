@@ -15,7 +15,7 @@
 
 .center.home {
     margin-top: 90px;
-    background-color: gray;
+    background-color: #163390;
 }
 
 .homepage-h1 {
@@ -32,4 +32,10 @@
 .homepage-p {
     color: white;
     font-size: 30px;
+}
+
+input {
+    color: white;
+    background-color: #163390;
+    // border-style: none !important;
 }
