@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col s12 center">
     <% @athletes.each do |athlete| %>
-    <div>
-      <%= athlete.full_name %>
-    </div>
+  <div>
+    <%= athlete.full_name %>
+  </div>
     <% end %>
   </div>
-  <ul class="pagination"><li class="waves-effect">
-  <%= will_paginate @athletes %></li></ul>
-  </div>
+</div>
+<!--<ul class="pagination"><li class="waves-effect">-->
+<!--<%= will_paginate @athletes %></li></ul>-->
