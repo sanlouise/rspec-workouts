@@ -4,7 +4,7 @@
   <p class="homepage-p">Show them what you've got.</p>
   
   <div class="row">
-    <div class="col s6 offset-s3 center">
+    <div class="col s12 m6 offset-m3 center">
       <div class="center home">
         <p class="homepage-p">Join Our Other Members<p>
           <div class="row">
@@ -18,16 +18,19 @@
                 <% end %>
               </div> 
             </div>
-     <!--<div class="col s6 offset-s3 center">   -->
-     <!--   <ul class="pagination"><li class="waves-effect">-->
-     <!--   < will_paginate @athletes %></li></ul>-->
-          
-     <!--   < athletes.each do |athlete| %>-->
-     <!--   <div>-->
-     <!--     <= athlete.full_name %>-->
-     <!--   </div>-->
-     <!--   < end %>-->
-     <!-- </div>-->
+ 
+       <div class="row">
+         <div class="col s12">
+            <ul class="pagination"><li class="waves-effect">
+              <%= will_paginate @athletes %></li></ul>
+             
+            <% @athletes.each do |athlete| %>
+            <div>
+              <%= athlete.first_name %>
+            </div>
+            <% end %>
+          </div>
+        </div>
      </div>
     </div>
   </div>
