@@ -12,7 +12,7 @@
               <div class="center">
                 <%= form_tag(search_dashboard_path, role: "search") do %>
                   <div class="input-field">
-                    <%= text_field_tag :search_name, nil, placeholder: "Search members" %>
+                    <%= text_field_tag :search_name, nil, id: "search", type: "search", placeholder: "Search members" %>
                   </div>
                     <i class="small material-icons"><%= submit_tag "search" %></i>
                 <% end %>
