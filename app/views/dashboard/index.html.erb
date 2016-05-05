@@ -23,20 +23,21 @@
          <div class="col s12">
             <!--<ul class="pagination"><li class="waves-effect">-->
               <!--< will_paginate @athletes %></li></ul>-->
-             
+            <div class="col s8 offset-s2 left">
             <% @athletes.each do |athlete| %>
-            <div>
-              <%= athlete.full_name %>
-              
-              <!--Add the 'following users' functionality-->
-              <% if current_user %>
-                <%= link_to "Follow", friendships_path(friend_id: athlete.id),
-                method: :post,
-                class: 'btn-floating btn-small waves-effect waves-light red' unless current_user.follows_or_same?(athlete) %>
-              <% end %>
-              
-            </div>
+              <div>
+                <%= athlete.full_name %>
+                
+                <!--Add the 'following users' functionality-->
+                <% if current_user %>
+                  <%= link_to "add", friendships_path(friend_id: athlete.id),
+                  method: :post,
+                  class: 'material-icons' unless current_user.follows_or_same?(athlete) %>
+                <% end %>
+                
+              </div>
             <% end %>
+            </div>
           </div>
         </div>
         

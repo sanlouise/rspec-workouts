@@ -35,5 +35,15 @@
     <% end %>
     <%= link_to "New Workout", new_user_exercise_path(current_user), class: "btn btn-primary link" %>
     <%= content_tag :div, "", id: "chart", data: {workouts: @exercises} %>
+    
+    <hr />
+    <h3 class="center">Members I Follow</h3>
+    <% @friends.each do |friend| %>
+      <%= link_to friend.full_name, friendship_path(current_user.current_friendship(friend)) %>
+      <%= link_to "delete", friendship_path(current_user.current_friendship(friend)), method: :delete, data: {confirm: "Are you sure you want to unfollow this user?"}, class: "material-icons" %>
+    
+    <% end %>
+    
+    
   </div>
 </div>
