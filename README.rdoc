@@ -1,28 +1,37 @@
-== README
+This Ruby on Rails app lets users keep track of their workouts and compare their activity with friends and family.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+```
+git clone https://github.com/sanlouise/rspec-workouts.git
 
-* Ruby version
+cd /crewpanda
 
-* System dependencies
+bundle
 
-* Configuration
+bundle exec rake db:migrate
 
-* Database creation
+rails server
+```
 
-* Database initialization
+The app will now be running on localhost:3000.
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+View the app live at [athletes-crib.herokuapp.com](http://athletes-crib.herokuapp.com/).
 
-* Deployment instructions
+## Contributing
 
-* ...
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
+## Credits
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* [Sandra Adams-Hallie](https://github.com/sanlouise)
+
+## License
+
+MIT License. View it [here](https://github.com/sanlouise/rspec-workouts/blob/master/LICENSE).
