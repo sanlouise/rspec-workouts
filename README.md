@@ -5,7 +5,7 @@ This Ruby on Rails app lets users keep track of their workouts and compare their
 ```
 git clone https://github.com/sanlouise/rspec-workouts.git
 
-cd /crewpanda
+cd /workout_app
 
 bundle
 
